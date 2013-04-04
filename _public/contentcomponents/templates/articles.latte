@@ -1,0 +1,43 @@
+{if $isHome}
+    {if $items}
+	{foreach $items as $id =>$article}
+	<div class="articlePreview">
+	    <div class="top">
+		<div class="in clearfix">
+		    <h4><a href="{plink :Front:Article:one $id}"> {$article->headline}</a></h4><div class="info">{$article->created|date:"j.n.Y"} | <td>{$article->author}</td></div>
+		</div>	    
+	    </div>
+	    <div class="articleImage" n:if="$article->image_url">
+		<img src="">
+	    </div>
+	    <div class="body">
+
+		{!$article->perex|truncate:250}
+	    </div>
+	</div>
+	{/foreach}
+    {else}
+	žádné články k zobrazení
+    {/if}
+{else}
+    <table class="admin-list">
+	<tr>
+	    <th>Název Článku</th>
+	    <th>Autor</th>
+	    <th>Poslední změna</th>
+	    <th>Vytvořeno</th>
+
+	</tr>
+	{foreach $items as $article}
+	    <tr>
+		<td>{$article->headline}</td>
+		<td>{$article->user->name}</td>
+		<td>{$article->updated|date:"j.n.y"}</td>
+		<td>{$article->created|date:"j.n.y"}</td>
+		
+		<td ><a href="{plink :Admin:ArticleManager:Edit $article->id}">Upravit</a></td>
+		<td ><a href="{plink :Admin:ArticleManager:Delete $article->id}">Smazat</a></td>
+	    </tr>
+	{/foreach}
+    </table>
+{/if}

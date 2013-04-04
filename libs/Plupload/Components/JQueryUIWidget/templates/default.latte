@@ -1,0 +1,51 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Setup gears version
+        $("#uploader-{!$token}").plupload({
+            // General settings
+            runtimes : {$pluploadSettings->getRuntimes()},
+            url : {link upload! $pluploadSettings->getToken()},
+            max_file_size : {$pluploadSettings->getMaxFilesize()},
+            headers: { 'X-Requested-With': 'XMLHttpRequest'},
+            init : {
+                // Called when a file has finished uploading
+                FileUploaded: function(up, file, info) {
+                    var json = jQuery.parseJSON(info.response);
+		    $.nette.success(json);
+                    //$.nette.success(json);
+                }
+            },
+            chunk_size : {$pluploadSettings->getMaxChunkSize()},
+            flash_swf_url : "{!$tempLibsDir}/swf/plupload.flash.swf",
+            silverlight_xap_url : "{!$tempLibsDir}/xap/plupload.silverlight.xap",
+	    filters: {!$pluploadSettings->getFilters()}
+        });
+	//<!-- Lokalizace pluupload -->
+	{var $lang = $pluploadSettings->getLanguage()}
+
+    });
+    	{if $lang == "cs"}
+	    plupload.addI18n({
+		    'Select files' : 'Vyberte soubory',
+		    'Add files to the upload queue and click the start button.' : 'Přidejte soubory k nahrání a klikněte na tlačítko <b>Začít nahrávat</b>',
+		    'Filename' : 'Jméno souboru',
+		    'Status' : 'Status',
+		    'Size' : 'Velikost',
+		    'Add Files' : 'Přidat soubory',
+		    'Start Upload':'Začít nahrávat',
+		    'Stop Upload' : 'Zastavit nahrávání',
+		    'Drag files here.' : 'Můžete použít funkce <b>Drag and drop</b> a jednoduše přetáhnout vaše soubory nad tento box.',
+		    '%d files queued' : '%d souborů ve frontě'
+	    });
+	{/if}
+</script>
+
+<div class="plupload" id="uploader-{!$token}" style="width: 750px; height: 330px;">
+    There is no support for any of these: {$pluploadSettings->getRuntimes()}
+</div>
+{if $isMagical}
+    {!$libsComponent->registerJs('/js/plupload.full.js')}
+    {!$libsComponent->registerJs('/js/jquery.ui.plupload.js')}
+
+    {!$libsComponent->registerCss('/css/jquery.ui.plupload.css')}
+{/if}

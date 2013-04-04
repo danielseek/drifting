@@ -1,0 +1,35 @@
+
+{if $isAdmin }
+ <table class="admin-list">
+	<tr>
+	    <th>Název akce</th>
+	    <th>Datum od</th>
+	    <th>Datum do</th>
+	    <th>Místo</th>
+	    <th>Autor</th>
+	    <th>Poslední změna</th>
+	    <th>Vytvořeno</th>
+	</tr>
+	{foreach $events as $event}
+	    <tr>
+		<td>{$event->name}</td>
+		<td>{$event->date_start|date:"d.m.Y"} {$event->time_start|date:"H:i"}</td>
+		<td>{$event->date_end|date:"d.m.Y"} {$event->time_end|date:"H:i"}</td>
+		<td>{$event->location}</td>
+		<td>{$event->user->name}</td>
+		<td>{$event->updated|date:"d.m.Y"}</td>
+		<td>{$event->created|date:"d.m.Y"}</td>
+		
+		<td ><a href="{plink :Admin:EventManager:Edit $event->id}">Upravit</a></td>
+		<td ><a href="{plink :Admin:EventManager:Delete $event->id}">Smazat</a></td>
+	    </tr>
+	{/foreach}
+    </table>
+{else}
+    {foreach $events as $event}
+    <div class="eventpreview">
+    <h3>{$event->headline}</h3>
+    {$event->perex}
+    </div>
+    {/foreach}
+{/if}

@@ -1,0 +1,94 @@
+common:
+	parameters:
+		globalTemplate: drifting
+		title: "Czech drift series"
+		pluginsDirectory: /plugins/
+		nblocksDirectory: /nblocks/
+
+		activeNblocks:
+			- partners
+		activePlugins:
+	php:
+		date.timezone: Europe/Prague
+		# zlib.output_compression: yes
+
+	nette:
+		debugger:
+		database:
+			dsn: "%db.driver%:host=%db.host%;dbname=%db.dbname%"
+			user: %db.user%
+			password: %db.password%
+			reflection: discovered
+		application:
+			FrontModule\errorPresenter: Error
+		session:
+			autoStart: smart # výchozí je smart
+			expiration: "+ 10 days"
+
+	services:
+		#dbReflection: Nette\Database\Reflection\DiscoveredReflection
+		#database:
+		##		'%db.driver%:host=%db.host%;dbname=%db.dbname%', 
+		#		%db.user%, 
+		#		%db.password%
+		#	)
+		#	setup:
+		#		- setDatabaseReflection(@dbReflection) 
+		database: @nette.database.default
+		authorizator:
+			class: Nette\Security\Permission
+			setup:
+				- addRole('member')
+				- addRole('fotographer')
+				- addRole('video')
+				- addRole('writer', {'fotographer', 'video'})
+				- addRole('admin')
+
+				- addResource('Admin:Default')
+				- addResource('Admin:GalleryManager')
+				- addResource('Admin:VideoManager')
+				- addResource('Admin:ArticleManager')
+				- addResource('Admin:CategoryManager')
+				- addResource('Admin:PageManager')
+				- addResource('Admin:ImageManager')
+				- addResource('Admin:HomeBlockManager')
+				- addResource('Admin:PluginManager')
+				
+				- addResource('Admin:EventManager')
+
+				- addResource('Admin:RaceManager')
+
+
+				- allow('video','Admin:VideoManager')
+				- allow('fotographer', 'Admin:ImageManager')
+
+				- allow('writer','Admin:Default')
+				- allow('writer','Admin:ArticleManager')
+				- allow('writer','Admin:PageManager')
+				
+				- allow('admin')
+		authenticator: 
+			class: Natty\Security\Authenticator(@database)
+
+
+		repositoryFactory: Natty\RepositoryFactory
+
+		articleRepository: Natty\Repositories\ArticleRepository
+		menuRepository: Natty\Repositories\MenuRepository
+		galleryRepository: Natty\Repositories\GalleryRepository
+		eventRepository: Natty\Repositories\EventRepository
+		driftRaceRepository: Natty\Repositories\DriftRaceRepository
+		driftDriverRepository: Natty\Repositories\DriftDriverRepository
+		driftBattleRepository: Natty\Repositories\DriftBattleRepository
+
+		contentFactory: Natty\ContentFactory
+		nattyTranslator: Natty\NattyTranslator
+		uploadedQueue: Natty\UploadedQueue
+		pluploadProcessor: Natty\PluploadProcessor
+		nblocks: Natty\Plugins\Nblocks(%nblocksDirectory%,%activeNblocks%) 
+		plugins: Natty\Plugins\Plugins(%pluginsDirectory%,%activePlugins%)
+	factories:
+
+production < common:
+
+development < common:

@@ -1,0 +1,110 @@
+/* 
+    Document   : intro
+    Created on : 8.3.2013, 22:21:52
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#homepage { 
+    display: block;
+    width: 960px;
+}
+#homepage #leftColumn { 
+    float: left;
+    width: 618px;
+    color: white;
+    background: #515151;
+    text-align: left;
+}
+
+#homepage #leftColumn .in { 
+    margin: 10px;
+}
+
+#homepage #leftColumn .headline h3 { 
+    font-size: 15pt;
+    color: #2d2d2d;
+    margin-left: 45px;
+    margin-bottom: -9px;
+}
+#homepage #leftColumn .headline { 
+    border-bottom: 1px solid #ee740d;
+    margin-bottom: 10px;
+}
+/* news */
+#homepage #leftColumn #news .articlePreview {
+    
+}
+#homepage #leftColumn #news .articlePreview .top {
+    background: #404040;
+    width: 100%;
+}
+#homepage #leftColumn #news .articlePreview .top .in { 
+    margin: 5px 15px;
+}
+#homepage #leftColumn #news .articlePreview .top .info {
+    float: right;
+    font-size: 10pt;
+    color: #878686;
+    margin-top: 3px;
+}
+#homepage #leftColumn #news .articlePreview .top h4 a {
+    color: #c55a03;
+    float: left;
+}
+#homepage #leftColumn #news .articlePreview .top h4 a:hover {
+    color: #D94612;
+}
+/* calendar */
+#homepage #leftColumn #left {
+    float: left; 
+    width: 290px;
+}
+#homepage #leftColumn #right {
+    float: right; 
+    width: 290px;
+}
+
+#homepage #rightColumn {
+    width: 320px;
+    float: right;
+    margin-right: 5px;
+}
+#homepage #rightColumn .border {
+    position: relative; left: -5px;
+    width: 330px;
+    background: #515151;
+}
+#homepage #rightColumn .border iframe {
+    width: 320px;
+    height: 200px;
+    margin: 5px 5px 5px 5px;
+}
+#homepage #rightColumn .headline {
+    height: 40px;
+    width: 320px;
+    position: relative;
+    background: transparent url("../img/homeColRep.png") repeat-x center;
+}
+#homepage #rightColumn .headline h3 {
+    color: #ff7500;
+    font-size: 14px; font-weight: normal;
+    text-align: left;
+    width: 200px; padding-left: 50px;
+    line-height: 15px;
+}
+#homepage #rightColumn .headline .decoration {
+    position: absolute;
+    left: 20px;
+    top: 12px; 
+    width: 22px; height: 16px;
+    background: transparent url("../img/homeColDec.png") no-repeat center center;
+}
+#homepage #rightColumn .facebookBox {
+   padding: 5px;
+   background: #333333;
+}
+
+
+

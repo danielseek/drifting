@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="home">
+    <name>News</name>
+    <info>
+	<author>Daniel Sýkora</author>
+	<copyright>All rights reserved.</copyright> 
+	<version>1.0.0</version> 
+	<description>Jednoduchý rozcestník pro navigaci po webu</description>
+    </info>
+    <install>
+	<menuTitile>Rozcestník</menuTitile>
+    </install>
+</module>

@@ -1,0 +1,89 @@
+{**
+ * Drifting
+ *
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+	<head>
+	    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	    <meta name="description" content="" />
+	    <meta name="robots" content="{$robots}" n:ifset="$robots" />
+	    <title>{$title}</title>
+
+            {control css}
+	    <!--[if lte IE 7]>
+		<link rel="stylesheet" href="{$basePath}/css/ie.css" type="text/css" />
+	    <![endif]-->
+        </head>
+	<body>	
+		{if $user->isLoggedIn()}
+                    <div id="topStripe" class="" ><div class="in clearfix">
+			 <div id="user">
+				Přihlášený uživatel <em>{$user->getIdentity()->login}</em> (<a n:href="logout!">logout</a>)
+			 </div>
+			  
+	
+                    </div></div>
+		{/if}
+		<div id="page">
+		    <span id="header"></span>
+		    <h1>Czech Drift Series</h1>
+
+		    <div class="wrapper">
+				<div id="mainmenu">
+				    {control menu}
+				</div>
+				<div id="partners">
+				    <div class="in">
+				    {control partners}
+				    </div>
+				</div>
+				
+				<div id="content">
+				    <div class="in clearfix">
+					<span id="share"></span>
+					{ifCurrent Homepage:default}
+					    {include #content}
+					{else}
+					    <div id="container" class="rounded border-trans">
+						<div class="in">
+						    {include #content}
+						</div>
+					    </div>
+					{/ifCurrent}
+				    </div>	
+					<div id="footer" class="rounded-top border-trans">
+					    <div class="left">
+					    <a href="{link :Admin:Default:default}">Vstoupit do administrace</a> | Design: <a target="_blank" href="">Daniel Sýkora</a>
+					    </div>
+					    <div class="right">
+ <span class='st_facebook_large' displayText='Facebook'></span>
+    <span class='st_googleplus_large' displayText='Google +'></span>
+    <span class='st_twitter_large' displayText='Tweet'></span>
+    <span class='st_email_large' displayText='Email'></span>
+    <span class='st_youtube_large' displayText='Youtube Subscribe' st_username='czechdriftseries'></span>
+
+    <div n:syntax="off">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "b422efba-56c8-417d-887f-1749e24c9694", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    </div>
+					    </div>
+					</div>
+				</div>
+
+		    </div>
+		</div>
+                <!-- scripts -->
+                    {control js}
+		{block scripts}
+		<script src="{$basePath}/js/jquery.js"></script>
+		<script src="{$basePath}/js/netteForms.js"></script>
+		<script src="{$basePath}/js/main.js"></script>
+		{/block}
+	</body>
+</html>

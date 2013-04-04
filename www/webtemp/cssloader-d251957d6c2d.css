@@ -1,0 +1,366 @@
+
+body {
+    text-align: center;
+}
+.error {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 400px;
+}
+.error .in {
+    border: #00780e 5px solid;
+    background-color: #434343;
+    color: #d91717;
+    padding: 20px;
+}
+table {
+    margin: 0 auto;
+    background-color: #202020;
+    padding: 20px;
+    width: 400px;
+    color: white;
+    text-align: right;
+}
+td {padding: 0px 0 10px 10px; color: white;line-height: 25px;}
+input {
+    border: 0;
+    padding: 5px; margin: 0;
+
+}
+.button {
+    background-color: #234283;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+#err {
+    background-color:#C41717;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+/* 
+    Document   : admin
+    Created on : 3.3.2013, 1:13:51
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body{
+    margin: 5px;
+}
+* {
+    padding: 0; margin: 0;
+}
+#topMenu {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 0 7px;
+	
+	background: -moz-linear-gradient(
+		top,
+		#292929 0%,
+		#3b3b3b 50%,
+		#242424 50%,
+		#000000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#292929),
+		color-stop(0.50, #3b3b3b),
+		color-stop(0.50, #242424),
+		to(#000000));
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 0px solid #f2721d;
+	-moz-box-shadow:
+		0px 0px 2px rgba(242,114,29,1),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 0px 2px rgba(242,114,29,1),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	box-shadow:
+		0px 0px 2px rgba(242,114,29,1),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,1),
+		0px 1px 0px rgba(255,255,255,0.2);
+
+
+
+
+
+    color: white;
+    float: left;
+    height: 3em;
+    line-height: 2em;
+    
+}
+#topMenu ul {
+    list-style: none outside none;
+    margin: 0 10px; padding: 0;
+}
+#topMenu ul li {
+    float: left;
+    position: relative;
+}
+#topMenu ul li a {
+    float: left;
+    padding: 6px;
+    color: white;
+}
+#topMenu ul li ul {
+    display: none;
+}
+#topMenu ul li:hover ul, #topMenu ul li ul:hover  {
+    display: block;
+    position: absolute;
+    top: 3em;
+    left: -20px;
+
+}
+#topMenu ul li:hover ul li {
+    float: none; clear: both;
+}
+#topMenu ul li:hover ul li a {
+    width: 200px;
+    padding: 6px;
+   background-color: #1B435E;
+}
+#topMenu ul li:hover ul li a:hover {
+      background-color:#2e57b6;  
+}
+.separator {
+    display: block;
+    float: left; 
+    margin: 6px;
+}
+#user {
+    float: right;
+}
+#topPanel {
+    width: 100%;
+    display: block;
+}
+
+#content {
+    margin: 20px;
+}
+.control-form {
+    clear: both;
+}
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+ 
+.clearfix {
+   display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+   display: block;
+}
+ 
+* html .clearfix {
+   height: 1%;
+   overflow: visible;
+}
+.subMenu {
+    display: block;
+    width: 100%;
+}
+.subMenu ul {
+    list-style: none outside none;
+
+}
+.subMenu ul li {
+    float: left;
+
+}
+.subMenu ul li a {
+   border-top: 1px solid #db4d00;
+   background: #ab4211;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff9130), to(#ab4211));
+   background: -webkit-linear-gradient(top, #ff9130, #ab4211);
+   background: -moz-linear-gradient(top, #ff9130, #ab4211);
+   background: -ms-linear-gradient(top, #ff9130, #ab4211);
+   background: -o-linear-gradient(top, #ff9130, #ab4211);
+   padding: 5px 10px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 14px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   float: left
+   }
+#subMenu li a:hover {
+   border-top-color: #f2721d;
+   background: #f2721d;
+   color: #ffffff;
+   }
+#subMenu li a:active, #subMenu li.selected a {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+/*
+   Plupload
+------------------------------------------------------------------- */
+
+.plupload_button {cursor: pointer;}
+
+.plupload_wrapper {
+	font: normal 11px Verdana,sans-serif;
+	width: 100%;
+}
+
+.plupload .plupload_container input {width: 98%;}
+.plupload .plupload_filelist_footer {border-width: 1px 0 0 0}
+.plupload .plupload_filelist_header {border-width: 0 0 1px 0}
+div.plupload .plupload_file {border-width: 0 0 1px 0}
+div.plupload div.plupload_header {border-width: 0 0 1px 0; position: relative;}
+
+.plupload_file .ui-icon {
+	cursor:pointer;	
+}
+
+.plupload_header_content {
+	background-image: url('../img/plupload.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	min-height: 56px;
+	padding-left: 60px;
+	position:relative;
+}
+.plupload_header_content_bw {background-image: url('../img/plupload-bw.png');}
+.plupload_header_title {
+	font: normal 18px sans-serif;
+	padding: 6px 0 3px;
+}
+.plupload_header_text {font: normal 12px sans-serif;}
+
+.plupload_filelist,
+.plupload_filelist_content {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+}
+
+.plupload_cell {padding: 8px 6px;}
+
+.plupload_file {
+	border-left: none;
+	border-right: none;
+}
+
+.plupload .ui-sortable-helper,
+.plupload .ui-sortable .plupload_file {
+	cursor:move;	
+}
+
+.plupload_scroll {
+	max-height: 180px;
+	min-height: 168px;
+	_height: 168px;
+	overflow-y: auto;
+}
+
+.plupload_file_size, .plupload_file_status {text-align: right;}
+.plupload_file_size, .plupload_file_status {width: 52px;}
+.plupload_file_action {width: 16px;}
+.plupload_file_name {
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.plupload_file_rename {
+	width:95%;	
+}
+
+.plupload_progress {width: 60px;}
+.plupload_progress_container {padding: 1px;}
+
+
+/* Floats */
+
+.plupload_right {float: right;}
+.plupload_left {float: left;}
+.plupload_clear,.plupload_clearer {clear: both;}
+.plupload_clearer, .plupload_progress_bar {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+}
+.plupload_clearer {height: 0;}
+
+/* Misc */
+.plupload_hidden {display: none;}
+.plupload_droptext {
+	background: transparent;
+	text-align: center;
+	vertical-align: middle;
+	border: 0;
+	line-height: 165px;
+}
+
+.plupload_buttons, .plupload_upload_status {float: left}
+
+.plupload_message {
+	position: absolute;
+	top: 0px;
+	left: 0px;	
+	height: 100%;
+	width: 100%;
+}
+
+.plupload_message p {
+	padding:0.7em;
+	margin:0;
+}
+
+.plupload_message strong {
+	font-weight: bold;	
+}
+
+plupload_message i {
+	font-style: italic;	
+}
+
+.plupload_message p span.ui-icon {
+	float: left;
+	margin-right: 0.3em;	
+}
+
+.plupload_header_content .ui-state-error,
+.plupload_header_content .ui-state-highlight {
+	border:none;	
+}
+
+.plupload_message_close {
+	position:absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;	
+}
+
+.plupload .ui-sortable-placeholder {
+	height:35px;
+}

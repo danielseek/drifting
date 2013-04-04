@@ -1,0 +1,17 @@
+/* 
+    Document   : forms
+    Created on : 3.4.2013, 18:38:50
+    Author     : Daniel Sýkora 
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.form-table .my-label {
+    text-align: right;
+    min-width: 100px;
+    padding-right: 10px;
+    color: #363636;
+}
+.form-table .btn {
+    padding: 15px 30px;
+    margin-top: 10px;
+}

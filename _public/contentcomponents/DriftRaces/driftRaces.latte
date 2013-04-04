@@ -1,0 +1,42 @@
+{if $admin}
+    <table  class="admin-list">
+	<tr>
+	    <th>Název závodu</th>
+	    <th>Autor</th>
+	    <th>Poslední změna</th>
+	    <th>Vytvořeno</th>
+	</tr>
+	{foreach $items as $item}
+	    <tr>
+		<td>{$item->name}</td>
+		<td>{$item->user->name}</td>
+		<td>{$item->updated|date:"j.n.y"}</td>
+		<td>{$item->created|date:"j.n.y"}</td>
+		
+		<td n:if="$edit"><a href="{plink Edit $item->id}">Upravit</a></td>
+		<td n:if="$edit"><a href="{plink Delete $item->id}">Smazat</a></td>
+	    </tr>
+	{/foreach}
+    </table>
+{else}
+<table class="events"> 
+    <tr>
+	<th>Trať</th>
+	<th>Místo konání</th>
+	<th>Datum</th>
+
+    </tr>
+    {foreach $races as $race}
+	<tr>
+	    <td>{$race->track}</td>
+	    <td>{$race->location}</td>
+	    <td>{$race->date}</td>
+	    <td n:if="$user->isLoggedIn"><a href="">Podat přihlášku</a></td>
+	</tr>
+	<div class="articlepreview">
+	<h3>{$article->headline}</h3>
+	{$article->perex}
+	</div>
+    {/foreach}
+</table>
+{/if}

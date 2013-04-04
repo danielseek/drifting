@@ -1,0 +1,27 @@
+
+{block content}
+{form form}
+    <fieldset>
+	<div class="formee-msg-warning" n:if="$form->hasErrors()">
+	    <ul>
+		<li n:foreach="$form->errors as $error">{$error}</li>
+	    </ul>
+
+	</div>
+	{if $useTable}
+	    <table class="form-table">
+		<tr n:foreach="$form->controls as $name => $field">
+		    {if $form[$name]}{/if}
+		    <td class="my-label">{label $name /}<td>
+		    <td>{input $name}</td>
+		</tr>
+	    </table>
+	{else}
+	<div n:foreach="$form->controls as $name => $field" class="form-box">
+		{if $form[$name]}{/if}
+		<th>{label $name /}<th>
+		<td>{input $name}</td>
+	    </div>
+	{/if}
+    </fieldset>
+{/form}

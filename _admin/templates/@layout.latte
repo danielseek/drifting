@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	    <meta name="description" content="Administration Natty CMS" />
+	    <title>{block title}{/block}</title>
+	    {block head}{/block}
+            
+	    <!-- css -->
+
+	
+
+	    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+	    <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" /> 
+ 	    <!--<link rel="stylesheet" href="/tools/PluUpload/css/jquery.plupload.queue.css">-->
+	    <link rel="stylesheet" href="/tools/PluUpload/css/jquery.ui.plupload.css">
+	    <link rel="stylesheet" href="/tools/PluUpload/css/jquery.ui.plupload.css">
+	    <link rel="stylesheet" href="/css/universal.css">
+	    <link rel="stylesheet" href="/tools/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="/tools/bootstrap/css/bootstrap-responsive.min.css">
+	    <link rel="stylesheet" href="/tools/grido/grido.css">
+	    <link rel="stylesheet" href="/admin/css/forms.css">
+	    
+	    
+		<script type="text/javascript" src="/tools/ckeditor/ckeditor.js"></script>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/tools/PluUpload/js/plupload.full.js"></script>
+		<script type="text/javascript" src="/tools/PluUpload/js/jquery.ui.plupload.js"></script>
+		<script type="text/javascript" src="/tools/PluUpload/js/jquery.ui.plupload.js"></script>
+		
+		<script type="text/javascript" src="/tools/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/tools/grido/jquery.hashchange.min.js"></script>
+		<script type="text/javascript" src="/tools/grido/typeahead.js"></script>
+		<script type="text/javascript" src="/tools/grido/jquery.grido.js"></script>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript" src="/js/jquery.nette.js"></script>
+		<script type="text/javascript" src="/js/netteForms.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+		{control css} 
+	
+		
+	    
+
+        </head>
+	<body>
+
+
+{if $user->isLoggedIn()}
+
+	<div id="topPanel" class="clearfix">
+	    <div id="topMenu" class="gradient-black">
+	    {control topMenu, "sep( | )"}
+	    </div>
+	    <div id="user">
+		logged as <em>{$user->getIdentity()->login}</em> (<a n:href="logout!">logout</a>)
+	    </div>
+	</div>
+	    <div id="sideBar">
+	{control driftPanel}
+	    </div>
+	<div id="content">
+	    <div class="subMenu clearfix">
+		{control subMenu, "sep()"}
+	    </div>
+	    <div id="flashes">
+		{foreach $flashes as $flash}
+		<div class="flash {$flash->type}">{$flash->message}</div>
+		{/foreach}
+	    </div>
+            {include #content}
+        </div>
+	
+{else}
+    <p>You are not logged in.</p>
+{/if}
+	    <!-- scripts -->
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

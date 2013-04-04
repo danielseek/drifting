@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}This file is part of Natty CMS based on Nette (http://nattycms.org)
+${licensePrefix} Copyright (c) 2013 Daniel Sýkora (http://danielsykora.com)
+<#if licenseLast??>
+${licenseLast}
+</#if>

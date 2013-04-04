@@ -1,0 +1,106 @@
+
+/* 
+    Document   : intro
+    Created on : 8.3.2013, 22:21:52
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+/* 
+    Document   : syle.css
+    Created on : 8.3.2013, 22:18:54
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+* {
+    margin: 0; padding: 0;
+}
+body { 
+    background: #302C29 url("../img/bgPattern.jpg") repeat top center;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Bitstream Vera Sans",sans-serif;
+}
+#page {
+    margin: 0 auto;
+    width: 1196px;
+    position: relative;
+}
+#page #header {
+    display: block;
+    width: 1196px;
+    height: 299px;
+    top: 0; left: 0;
+    background: transparent  url("../img/header.jpg") no-repeat center center;    
+    position: absolute;
+}
+#page h1 {
+    padding: 50px;
+    color: white;
+    font-size: 60px;
+}
+#page .wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+#page .wrapper #partners {
+    width: 960px; height: 60px;
+    position: absolute;
+    top: 244px;
+    background: transparent url("../img/partnersSide.gif") no-repeat left center;
+}
+#page .wrapper #partners .in {
+    background: transparent url("../img/partnersSide2.gif") no-repeat right center;   
+    height: 60px;
+}
+#page .wrapper #mainmenu {
+    width: 960px;
+    height: 48px;
+    position: absolute;
+    top: 181px;
+}
+#page #mainmenu ul {
+    float: right;
+    position: relative;
+    right: 50%;
+}
+#page #mainmenu ul li {
+    float: left;
+    left: 50%;
+    position: relative;
+}
+#page #mainmenu ul li a {
+    height: 48px;
+    padding: 0 20px;
+    color: white;
+    line-height: 46px;
+    font-size: 16px;
+    float: left;
+    text-decoration: none;
+}
+#page #mainmenu ul li a:hover {
+    background: transparent url("../img/menuHov.png") no-repeat center center;
+}
+#page #mainmenu ul li.selected a {
+    color: #858585;
+    text-decoration: underline;
+}
+#page #mainmenu ul .separator {
+    float: left;
+        left: 50%;
+    position: relative;
+    height: 48px; width: 2px;
+    background: url("../img/menuSep.png") no-repeat center center;
+    display: block;
+}
+#page #content {
+    position: absolute;
+    top: 320px;
+}
+

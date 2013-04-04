@@ -1,0 +1,11 @@
+/* 
+    Document   : ie.css
+    Created on : 9.3.2013, 15:06:20
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.rounded-corners {  
+  behavior: url(/css/border-radius.htc);  
+}  

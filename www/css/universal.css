@@ -1,0 +1,29 @@
+/* 
+    Document   : universal.css
+    Created on : 29.3.2013, 14:16:20
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#timepicker-box {
+    display: none;
+    position: absolute;
+    border: solid #659EC9;
+    border-width: 1px;
+    height: 160px;
+    overflow-y: scroll;
+}
+#timepicker-box .time {
+    height: 20px; width: 100px;
+    line-height: 20px;
+    font-size: 14px;
+}
+#timepicker-box a {
+    display: block;
+    padding: 0 20px;
+    background:  white;
+    color: black;
+}
+#timepicker-box a:hover {
+    background:  #999;
+}

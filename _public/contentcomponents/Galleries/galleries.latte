@@ -1,0 +1,24 @@
+{if $showAsTable}
+    <table class="galleries">
+	<tr>
+	    <th>Název Galerie</th>
+	    <th>Autor</th>
+	    <th>Poslední změna</th>
+	    <th>Vytvořeno</th>
+	</tr>
+	{foreach $galleries as $gallery}
+	    <tr>
+		<td>{$gallery->name}</td>
+		<td>{$gallery->user->name}</td>
+		<td>{$gallery->updated|date:"j.n.y"}</td>
+		<td>{$gallery->created|date:"j.n.y"}</td>
+	    </tr>
+	{/foreach}
+    </table>
+{else}
+    {foreach $galleries as $gallery}
+    <div class="gallerypreview">
+    <h3>{$gallery->name}</h3>
+    </div>
+    {/foreach}
+{/if}

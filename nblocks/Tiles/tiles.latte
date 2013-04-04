@@ -1,0 +1,15 @@
+    {foreach $tiles as $tile}
+    <tr>
+        <td>{$task->created|date:'j. n. Y'}</td>
+        <td>{$task->text}</td>
+        <td>{$task->user->name}</td>
+    </tr>
+    <a n:href="$tile->link">
+            <div class="tile">
+                <div class="wrapImage">
+                    <img src="./template/tile/zvemeVas.jpg">
+                </div>
+                <h3>Zveme vás</h3>
+            </div>
+        </a>
+    {/foreach}

@@ -1,0 +1,14 @@
+services:
+	authorizator:
+		class: Nette\Security\Permission
+		setup:
+			- addRole('writer')
+			- addRole('fotographer')
+			- addRole('video')
+			- addRole('admin')
+			- addResource('Admin:Default')
+			- addResource('Admin:Page')
+			#- allow('editor', 'Admin:Default') # šetky akcie resource Admin:Default
+			- allow('admin') # šetky resources a ich akcie
+	authenticator: 
+		class: Natty\Security\Authenticator(@database,%db.prefix%)

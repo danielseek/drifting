@@ -1,0 +1,312 @@
+
+/* 
+    Document   : intro
+    Created on : 8.3.2013, 22:21:52
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#homepage { 
+    display: block;
+    width: 960px;
+}
+#homepage #leftColumn { 
+    float: left;
+    width: 610px;
+    color: white;
+    background: #515151;
+}
+#homepage #leftColumn .in { 
+    margin: 10px;
+}
+#homepage #rightColumn {
+    width: 320px;
+    float: right;
+    margin-right: 5px;
+}
+#homepage #rightColumn .border {
+    position: relative; left: -5px;
+    width: 330px;
+    background: #515151;
+}
+#homepage #rightColumn .border iframe {
+    width: 320px;
+    height: 200px;
+    margin: 5px 5px 5px 5px;
+}
+#homepage #rightColumn .headline {
+    height: 40px;
+    width: 320px;
+    position: relative;
+    background: transparent url("../img/homeColRep.png") repeat-x center;
+}
+#homepage #rightColumn .headline h3 {
+    color: #ff7500;
+    font-size: 14px; font-weight: normal;
+    text-align: left;
+    width: 200px; padding-left: 50px;
+    line-height: 15px;
+}
+#homepage #rightColumn .headline .decoration {
+    position: absolute;
+    left: 20px;
+    top: 12px; 
+    width: 22px; height: 16px;
+    background: transparent url("../img/homeColDec.png") no-repeat center center;
+}
+#homepage #rightColumn .facebookBox {
+   padding: 5px;
+   background: #333333;
+}
+
+
+
+
+/* 
+    Document   : syle.css
+    Created on : 8.3.2013, 22:18:54
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+* {
+    margin: 0; padding: 0;
+}
+a {
+    color: #824D20;
+}
+a:hover{
+    color: #D94612;
+}
+body { 
+    background: #302C29 url("../img/bgPattern.jpg") repeat top center;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Bitstream Vera Sans",sans-serif;
+    color: white;
+}
+#topStripe {
+    width: 100%;
+    background: #0B0B0B;
+    line-height: 30px;
+    text-align: center;
+    font-size: 10pt;
+}
+#topStripe .in {
+    margin: 0 20px;
+}
+#topStripe .in .center {
+    width: 960px;    
+    margin: 0 auto;
+    text-align: right;
+}
+#user {
+    float: right;
+}
+.login input[type="text"], .login input[type="password"] {
+    margin: 3px 5px;
+   	border-color:#c6c6c6 #dadada #eaeaea;
+	background: #fafafa;
+    height: 22px; width: 180px;
+      -moz-border-radius: 2px; /* Firefox */  
+  -webkit-border-radius: 2px; /* Safari, Chrome */  
+  border-radius: 2px; /* CSS3 */  
+  	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+  
+}
+#page {
+    margin: 0 auto;
+    width: 1196px;
+    position: relative;
+}
+#page #header {
+    display: block;
+    width: 1196px;
+    height: 299px;
+    top: 0; left: 0;
+    background: transparent  url("../img/header.jpg") no-repeat center center;    
+    position: absolute;
+}
+#page h1 {
+    padding: 50px;
+    color: white;
+    font-size: 60px;
+}
+#page .wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+#page .wrapper #partners {
+    width: 960px; height: 60px;
+    position: absolute;
+    top: 244px;
+    background: transparent url("../img/partnersSide.gif") no-repeat left center;
+}
+#page .wrapper #partners .in {
+    background: transparent url("../img/partnersSide2.gif") no-repeat right center;   
+    height: 60px;
+}
+#page .wrapper #mainmenu {
+    width: 960px;
+    height: 48px;
+    position: absolute;
+    top: 181px;
+}
+#page #mainmenu ul {
+    float: right;
+    position: relative;
+    right: 50%;
+}
+#page #mainmenu ul li {
+    float: left;
+    left: 50%;
+    position: relative;
+    list-style: none;
+    list-style-position: outside;
+}
+#page #mainmenu ul li a {
+    height: 48px;
+    padding: 0 20px;
+    color: white;
+    line-height: 46px;
+    font-size: 16px;
+    float: left;
+    text-decoration: none;
+}
+#page #mainmenu ul li a:hover {
+    background: transparent url("../img/menuHov.png") no-repeat center center;
+}
+#page #mainmenu ul li.selected a {
+    color: #858585;
+    text-decoration: underline;
+}
+#page #mainmenu ul .separator {
+    float: left;
+        left: 50%;
+    position: relative;
+    height: 48px; width: 2px;
+    background: url("../img/menuSep.png") no-repeat center center;
+    display: block;
+}
+#page #content {
+    position: absolute;
+    top: 320px;
+}
+#page #content .in {
+    padding-bottom: 195px;
+    position: relative;
+}
+#page #content .in #share {
+    position: absolute; bottom: 0; right: 0;
+    display: block;
+    width: 639px;
+    height: 282px;
+    background: transparent url("../img/footer-cars-transp.png") no-repeat center;
+}
+
+#footer {
+    width: 960px;height: 60px;
+    background: transparent url("../img/footer-grad.jpg") repeat center;
+    color: white;
+}
+#footer .left {
+    float: left;
+    margin: 20px 0px 0 40px;
+}
+#footer .right {
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 4px rgba(9, 9, 9, 0.75);
+    -moz-box-shadow:    0px 0px 4px rgba(9, 9, 9, 0.75);
+    box-shadow:         0px 0px 4px rgba(9, 9, 9, 0.75);
+}
+.border-trans {
+    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid rgba(0, 0, 0, 0.60);    
+}
+.transparent {
+  /* IE 8 */ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  /* IE 4-7 */ filter: alpha(opacity=40);
+  /* Netscape */   -moz-opacity: 0.40;
+  /* Safari 1.x */  -khtml-opacity: 0.40;
+  /* Good browsers */  opacity: 0.40;  
+}
+.no-trans {
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=100);
+
+  /* Netscape */
+  -moz-opacity: 1;
+
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+
+  /* Good browsers */
+  opacity: 100; 
+}
+.rounded {  
+  -moz-border-radius: 5px; /* Firefox */  
+  -webkit-border-radius: 5px; /* Safari, Chrome */  
+  border-radius: 5px; /* CSS3 */  
+}
+.rounded-top {  
+  -moz-border-radius: 5px 5px 0 0 ; /* Firefox */  
+  -webkit-border-radius:5px 5px 0 0 ; /* Safari, Chrome */  
+  border-radius: 5px 5px 0 0 ; /* CSS3 */  
+}
+.rounded-bot {
+  -moz-border-radius: 0 0 5px 5px; /* Firefox */  
+  -webkit-border-radius: 0 0 5px 5px; /* Safari, Chrome */  
+  border-radius: 0 0 5px 5px; /* CSS3 */  
+}
+
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+ 
+.clearfix {
+   display: inline-block;
+}
+.clear {
+    clear: both;
+}
+html[xmlns] .clearfix {
+   display: block;
+}
+ 
+* html .clearfix {
+   height: 1%;
+   overflow: visible;
+}
+
+
+/* 
+    Document   : sidepage
+    Created on : 9.3.2013, 16:43:57
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#container {
+    background: #515151;
+    z-index: 999;
+    position: relative;
+}
+#container .in {
+    margin: 10px;
+}

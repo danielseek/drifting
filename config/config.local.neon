@@ -1,0 +1,14 @@
+parameters:
+	db:
+		driver: mysql
+		host: localhost
+		dbname: drifting
+		user: root
+		password: planeta		
+		charset: utf8
+	developmentMode: true
+nette:
+
+services:
+
+factories:

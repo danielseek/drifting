@@ -1,0 +1,38 @@
+#login .error {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 400px;
+}
+#login .error .in {
+    border: #00780e 5px solid;
+    background-color: #434343;
+    color: #d91717;
+    padding: 20px;
+}
+#login table {
+    margin: 0 auto;
+    background-color: #202020;
+    padding: 20px;
+    width: 400px;
+    color: white;
+    text-align: right;
+}
+#login td {padding: 0px 0 10px 10px; color: white;line-height: 25px;}
+#login input {
+    border: 0;
+    padding: 5px; margin: 0;
+
+}
+#login .button {
+    background-color: #234283;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+#login  #err {
+    background-color:#C41717;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}

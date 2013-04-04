@@ -1,0 +1,57 @@
+{block content}
+<h2>Přidání nové galerie</h2>
+   
+	{form imageForm}
+	    {snippet imageFormErrors}
+	    <div class="formee-msg-error" n:if="$_form->hasErrors()">
+		<ul>
+		    <li n:foreach="$_form->errors as $error">{$error}</li>
+		</ul>
+	    </div>
+	    {/snippet}
+	    <h3>1. Vložte hromadně všechny vaše soubory do tohoto boxu</h3>
+		{control plupload}
+	    <h3>2. Pokud chcete doplňte informace o nahraných souborech:</h3>
+	    <div id="loadedFiles">
+		<table>	
+		     {snippet fileInputs}
+			    {var $formElements = Array(
+				    "fileSrc","fileUrl","fileName"
+				);}
+			    {foreach $_form['files']->containers as $id => $file}
+		    		<tr>
+				    <td>
+					<img src="{$file["fileUrl"]->getValue()}" width="100">
+				    </td>
+				    {foreach $formElements as $element}
+					<th>{$file[$element]->label}<th>
+					<td>{$file[$element]->control}</td>
+				    {/foreach}
+					<td>
+					    <a n:href="FileInputDelete! $id" class="ajax">Odebrat</a>
+					</td>
+				</tr>
+			    {/foreach}
+				<script n:syntax="off">
+				    var all = $(".isPreview");
+				    all.click(function() {
+					all.filter("checked").not(this).removeAttr('checked');
+				    });
+				</script>
+			{/snippet}
+		</table>
+	    </div>
+	    <h3>3. Vyplňte základní informace o galerii</h3>
+
+	    <table>	  
+		{var $formElements = Array(
+		    "name","send"
+		);}
+	    <tr n:foreach="$formElements as $name">
+		<th>{label $name /}<th>
+		<td>{input $name}</td>
+	    </tr>
+	    </table>
+	{/form}
+
+{/block}

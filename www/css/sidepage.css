@@ -1,0 +1,17 @@
+/* 
+    Document   : sidepage
+    Created on : 9.3.2013, 16:43:57
+    Author     : Daniel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#container {
+    background: #515151;
+    z-index: 999;
+    position: relative;
+    text-align: left;
+}
+#container .in {
+    margin: 10px;
+}

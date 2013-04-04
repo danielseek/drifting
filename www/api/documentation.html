@@ -1,0 +1,41 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+	<h1>Dokumentace k Api Drifting.cz</h1>
+	<h2>Info</h2>
+	Veškerá data se přenáší ve formátu <a href="http://www.w3schools.com/json/default.asp">JSON</a>.
+	Toto api je založeno na architektuře <a href="http://www.zdrojak.cz/clanky/rest-architektura-pro-webove-api/">REST</a>.
+	<h2>Právě probíhající závod</h2>
+	POZOR: V současné chvíli pouze ukázková data!!!!!
+	<h3>getCurrentRaceInfo.php</h3>
+	<div class="description">Zobrazí obecné informace o právě probíhajícím závodu.</div>
+	<div class="funcUrl"><strong>adresa:</strong> <a href="/api/getCurrentRaceInfo.php?api_key=android123">
+		/api/getCurrentRaceInfo.php?api_key=yourKey
+	 </a></div>
+	<div class="parametrs">
+	    <strong>Parametry</strong>
+	    <table>
+		<tr>
+		    <th>Jméno</th>
+		    <th>Popis</th>
+		</tr>
+		<tr>
+		<td>api_key</td><td>Api klíč vyžadovaný kvůli ropoznání klienta.</td>
+		</tr>
+	    </table>
+	</div>
+	<div class="output">
+	    <strong>Výstup</strong>
+	    {"id":0,"name":"sosnova","location":"Česká lípa","track":"Autodrom Sosnová","status":"qualifying"}
+	</div>
+	
+    </body>
+</html>

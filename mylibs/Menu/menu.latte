@@ -1,0 +1,26 @@
+{define #node}
+    {if $node}
+	    {if $node->children}
+		<li class="{$node->isSelected ? selected}">
+		    {include #link, node => $node}
+		    {var $level++}
+		    <ul class="level-{$level}">
+			{foreach $node->children as $subNode}
+			    {include #node, node => $subNode}
+			{/foreach}
+		    </ul>
+		    {var $level--}
+		</li>
+	    {else}
+		<li class="{$node->isSelected ? selected}">{include #link, node => $node}</li>
+                
+	    {/if}
+    {/if}
+{/define}
+{define #link}<a href="{isset($node->url) ? $node->url : "#" }">{$node->text}</a>{/define}
+<ul id="{$id}">
+    {foreach $root as $node}
+	{include #node, node => $node}
+	{sep}<span class="separator">{$separator}</span>{/sep}
+    {/foreach}
+</ul>

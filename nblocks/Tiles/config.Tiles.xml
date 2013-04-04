@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="home">
+    <name>Tiles</name>
+    <info>
+	<author>Daniel Sýkora</author>
+	<authorEmail></authorEmail> 
+	<authorUrl></authorUrl> 
+
+	<creatationDate>2013-1-27</created>
+	<copyright>All rights reserved.</copyright> 
+	<license></license> 
+	<version>1.0.0</version> 
+
+	<description>Provides tiles navigation for homepage</description>
+    </info>
+    <install>
+	<menuTitile>Správa dláždic</menuTitile>
+	<sqlFile></sqlFile>
+	<template></template>
+	<controlClass>\Natty\HomeBlocks\TilesControl</controlClass>\
+	<adminControlClass>\Natty\HomeBlocks\TilesAdminControl</adminControlClass>
+    </install>
+</module>

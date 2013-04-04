@@ -1,0 +1,6 @@
+{var $dir = WWW_DIR."/img/partners"}
+{foreach Nette\Utils\Finder::findFiles('*')->in($dir) as $file}
+    {var $link = str_replace("\\","/",str_replace(WWW_DIR,"",$file->getPathname()))}
+    <img src="{$link}" alt="{$file->getFilename()}" title="{$file->getFilename()}">
+{/foreach}
+

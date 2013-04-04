@@ -1,0 +1,83 @@
+{block content}
+
+<div id="homepage">
+    <div id="leftColumn" class="rounded border-trans">
+	<div class="in">
+	    <div class="headline"><h3>Novinky</h3></div>
+	    <div id="news">
+		{control news:home 2}
+	    </div>
+	    <div id="left">
+		<div class="headline"><h3>Kalendář závodů</h3></div>
+	    </div>
+	    <div id="right">
+		{if $raceTakesPlace}
+		
+		{else}
+		    <div class="headline"><h3>Poslední závod</h3></div>
+		    <div id="raceResults">
+		    </div>
+		    <div class="headline"><h3>Aktuální pořadí</h3></div>
+		    
+		{/if}
+	    </div>
+	</div>
+    </div>
+    <div id="rightColumn" class="shadow">
+	 <div class="login">			
+	    {form login}
+		<h3>Přihlásit se:</h3>
+		<table>
+		    <tr>
+			<td>{label name /}</td>
+			<td>{input name}</td>
+		    </tr>
+		    <tr>
+			<td>{label password /}</td>
+			<td>{input password}</td>
+		    </tr>
+		    <tr>
+			<td colspan=2>{input remember}{label remember /}</td>			
+		    </tr>
+		    <tr>
+			<td>{label send /}</td>
+			<td>{input send}</td>
+		    </tr>
+		</table>	
+	    {/form}
+	</div>
+	<div class="border rounded shadow">
+	    <iframe src="http://player.vimeo.com/video/59300629" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0" height="300" width="500"></iframe>
+	</div>
+	<div class="headline">
+	    <span class="decoration">
+	    <h3>Nejaktuálější video</h3>
+	</div>
+	<div class="border rounded shadow">
+	</div>
+	<div class="headline">
+	    <span class="decoration">
+	    <h3>Poslední galerie</h3>
+	</div>
+	<div class="facebookBox">
+	    <div class="fb-like-box" data-href="http://www.facebook.com/pages/Czech-Drift-Series/121883761163110?ref=ts&amp;fref=ts" data-width="300" data-height="340" data-show-faces="false" data-colorscheme="dark" data-stream="true" data-border-color="#d8731e" data-header="true"></div>
+	</div>
+	<div class="headline rounded-bot">
+	    <span class="decoration">
+	    <h3>CDS na facebooku</h3>
+	</div>
+	
+    </div>
+</div>
+
+
+<div id="fb-root"></div>
+<script n:syntax="off">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/cs_CZ/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+{/block}
